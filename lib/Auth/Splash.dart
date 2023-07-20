@@ -1,6 +1,9 @@
+
 import 'package:aws_starter/Widgets/Buttons.dart';
 import 'package:aws_starter/Widgets/Texts.dart';
 import 'package:flutter/material.dart';
+
+import 'LogIn.dart';
 
 class Splash extends StatelessWidget {
   const Splash({Key? key}) : super(key: key);
@@ -19,14 +22,24 @@ class Splash extends StatelessWidget {
                   'assets/rocket.png', width: 150,)
           ),
             const SizedBox(height: 30,),
-            const BlueTitle(text: 'InstaMobile'),
+            const PurpleTitle(text: 'InstaMobile'),
             const SizedBox(height: 30,),
             const BlackText(text:'Use this codebase to start a new AWS mobile app in minutes.'),
             const SizedBox(height: 20,),
-            BlueFilledButton(text: 'Log In', onPressed: (){}),
-            BlueOutlineButton(onPressed: (){}, text: 'Sign Up')
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+              child: BlueFilledButton(text: 'Log In', onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LogIn()));
+              }),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+              child: BlueOutlineButton(onPressed: (){}, text: 'Sign Up'),
+            )
         ],),
       ),
     );
   }
+
+
 }

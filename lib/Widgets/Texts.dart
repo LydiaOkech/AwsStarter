@@ -1,24 +1,24 @@
 import 'package:aws_starter/Constants/Colors.dart';
 import 'package:flutter/material.dart';
 
-class BlueTitle extends StatelessWidget {
+class PurpleTitle extends StatelessWidget {
   final String text;
-  const BlueTitle({Key? key, required this.text}) : super(key: key);
+  const PurpleTitle({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Text(text, style: const TextStyle(color: MyColors.blueColor,
+    return Text(text, style: const TextStyle(color: MyColors.purpleColor,
         fontSize: 25, fontWeight: FontWeight.bold),);
   }
 }
 
-class BlueText extends StatelessWidget {
+class PurpleText extends StatelessWidget {
   final String text;
-  const BlueText({Key? key, required this.text}) : super(key: key);
+  const PurpleText({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Text(text, style: const TextStyle(color: MyColors.blueColor,),);
+    return Text(text, style: const TextStyle(color: MyColors.purpleColor,),);
   }
 }
 
@@ -40,5 +40,16 @@ class BlackText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(text, style: const TextStyle(color: MyColors.blackColor,
     fontSize: 18), textAlign: TextAlign.center,);
+  }
+}
+
+class BlueText extends StatelessWidget {
+  final String text;
+  const BlueText({Key? key, required this.text}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(text, style: const TextStyle(color: MyColors.blueColor,
+        fontSize: 18), textAlign: TextAlign.center,);
   }
 }
