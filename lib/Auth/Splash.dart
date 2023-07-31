@@ -1,4 +1,5 @@
 
+import 'package:aws_starter/Auth/Register.dart';
 import 'package:aws_starter/Widgets/Buttons.dart';
 import 'package:aws_starter/Widgets/Texts.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +35,9 @@ class Splash extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-              child: BlueOutlineButton(onPressed: (){}, text: 'Sign Up'),
+              child: BlueOutlineButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const Register()));
+              }, text: 'Sign Up'),
             )
         ],),
       ),
