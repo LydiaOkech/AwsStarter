@@ -4,6 +4,7 @@ import 'package:aws_starter/Widgets/TextFieds.dart';
 import 'package:aws_starter/Widgets/Texts.dart';
 import 'package:flutter/material.dart';
 
+import '../Pages/Home.dart';
 import 'ForgotPass.dart';
 
 class LogIn extends StatelessWidget {
@@ -55,7 +56,7 @@ class LogIn extends StatelessWidget {
                       ),
                       const SizedBox(height: 30,),
                       BlueFilledButton(text: 'Log In', onPressed: (){
-                        logIn();
+                        logIn(context);
                       })
 
                     ],
@@ -66,5 +67,7 @@ class LogIn extends StatelessWidget {
     );
   }
 
-  void logIn() {}
+  void logIn(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
+  }
 }

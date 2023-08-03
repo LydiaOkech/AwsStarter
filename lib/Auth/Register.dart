@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
 import '../Constants/Colors.dart';
+import '../Pages/Home.dart';
 import '../Widgets/Buttons.dart';
 import '../Widgets/TextFieds.dart';
 import '../Widgets/Texts.dart';
@@ -97,7 +98,9 @@ class _RegisterState extends State<Register> {
 
                       ),
                           const SizedBox(height: 20,),
-                          BlueFilledButton(text: 'Send Code', onPressed:(){}),
+                          BlueFilledButton(text: 'Send Code', onPressed:(){
+                            MoveToHome();
+                          }),
                           const SizedBox(height: 15,),
                           const BlackText(text: 'OR'),
                           const SizedBox(height: 15,),
@@ -119,7 +122,9 @@ class _RegisterState extends State<Register> {
                         children: [
                           EmailTextField(controller: _emailController, hintText: 'email', label: 'E-mail'),
                           const SizedBox(height: 20,),
-                          BlueFilledButton(text: 'Sign Up', onPressed:(){}),
+                          BlueFilledButton(text: 'Sign Up', onPressed:(){
+                            MoveToHome();
+                          }),
                           const SizedBox(height: 15,),
                           const BlackText(text: 'OR'),
                           const SizedBox(height: 15,),
@@ -145,5 +150,9 @@ class _RegisterState extends State<Register> {
         ),
       ),
     );
+  }
+
+  MoveToHome(){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => Home() ));
   }
 }

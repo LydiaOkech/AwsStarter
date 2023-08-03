@@ -43,6 +43,17 @@ class BlackText extends StatelessWidget {
   }
 }
 
+class BoldBlackText extends StatelessWidget {
+  final String text;
+  const BoldBlackText({Key? key, required this.text}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(text, style: const TextStyle(color: MyColors.blackColor,
+        fontSize: 18, fontWeight: FontWeight.bold), textAlign: TextAlign.center, );
+  }
+}
+
 class BlueText extends StatelessWidget {
   final String text;
   const BlueText({Key? key, required this.text}) : super(key: key);
